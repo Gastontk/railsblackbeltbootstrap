@@ -1,0 +1,40 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body {
+ 	background-color: lightblue;
+ }
+ .div-user{
+ 	vertical-align: right;
+
+ }
+ .div-user-error {
+ 	color: red;
+ 	background-color: linen;
+ 	border: solid black 1px;
+	overflow: hidden; 
+	width: 450px;
+	padding-top: 1px
+ }
+ #email, #password{ 	/*background-color: red;*/
+ 	/*width: 4em;*/
+  /*float: right;*/
+  text-align: center;
+  margin-right: 0.5em;x
+  display: block
+ }
+ form{
+ 	/*background-color: red;*/
+ }

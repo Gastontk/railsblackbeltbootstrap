@@ -1,0 +1,42 @@
+<h1>Users#new</h1>
+<h3 style="color:red;">
+	 <%= flash[:alert] if flash[:alert] %> 
+
+</h3>
+
+
+<%= form_tag '/login' do %>
+
+  Email: <%= text_field_tag :email %> <br>
+  Password: <%= password_field_tag :password %> <br>
+  <%= submit_tag "Submit" %>
+
+<% end %>
+
+
+
+
+
+<h1>Signup!</h1>
+
+<div class="div-user">
+
+<% if @user && @user.errors.any? %>
+	<div class='div-user-error'>
+	<% @user.errors.full_messages.each do |t| %> <br>
+		<%= t %>
+	<% end %>
+	</div>
+<% end %>
+
+<%= form_for :user, url: '/users' do |f| %>
+
+  First Name: <%= f.text_field :first_name %> <br>
+  Last Name: <%= f.text_field :last_name %> <br>
+  Email: <%= f.email_field :email %> <br>
+  Password: <%= f.password_field :password %> <br>
+  Password Confirmation: <%= f.password_field :password_confirmation %> <br>
+  <%= f.submit "Submit" %>
+
+<% end %>
+
