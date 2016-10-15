@@ -11,7 +11,8 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
         # redirect_to '/'
-        render plain: "#{@user.first_name} saved."
+         flash[:alert] =  "#{@user.first_name} #{@user.last_name} created and logged in."
+         redirect_to '/signup'
     else
                   # render plain: @user.errors.full_messages.third
 
