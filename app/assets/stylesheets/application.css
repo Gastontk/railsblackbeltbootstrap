@@ -25,7 +25,7 @@
  	background-color: linen;
  	/*border: solid black 1px;*/
 	overflow: hidden; 
-	width: 390px;
+	width: 410px;
 	padding-top: 1px
  }
  #email, #password{ 	/*background-color: red;*/
@@ -47,14 +47,14 @@
 .div-user{
 		border: solid black 1px;
 		overflow: hidden; 
-		width: 390px;
+		width: 410px;
 		background-color:linen;
 	}
 .div-login{
 
 		border: solid black 1px;
 		overflow: hidden; 
-		width: 390px;
+		width: 410px;
 		background-color:linen;
 
 	
@@ -62,7 +62,7 @@
 input{
   width: 20em;
   float: right;
-  text-align: right;
+  text-align: left;
   /*margin-right: 0.5em;*/
   display: block
 }
