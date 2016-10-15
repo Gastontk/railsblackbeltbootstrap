@@ -4,14 +4,15 @@
 
 </h3>
 
+<div class = 'div-login'>
+	<%= form_tag '/login' do %>
 
-<%= form_tag '/login' do %>
+	  Email: <%= text_field_tag :email %> <br>
+	  Password: <%= password_field_tag :password %> <br> <br>
+	  <%= submit_tag "Login", :class => 'login-button' %>
 
-  Email: <%= text_field_tag :email %> <br>
-  Password: <%= password_field_tag :password %> <br>
-  <%= submit_tag "Submit" %>
-
-<% end %>
+	<% end %>
+</div>
 
 
 
@@ -35,8 +36,10 @@
   Last Name: <%= f.text_field :last_name %> <br>
   Email: <%= f.email_field :email %> <br>
   Password: <%= f.password_field :password %> <br>
-  Password Confirmation: <%= f.password_field :password_confirmation %> <br>
-  <%= f.submit "Submit" %>
+  Password Confirmation: <%= f.password_field :password_confirmation %> <br> <br>
+  <%= f.submit "Create User", :class => 'login-button' %>
+
+</div>
 
 <% end %>
 

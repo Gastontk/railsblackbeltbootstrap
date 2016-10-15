@@ -11,12 +11,12 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       flash[:alert] = "Welcome #{@user.first_name.capitalize} #{@user.last_name.capitalize}!!"
 
-      redirect_to '/'
+      redirect_to '/signup'
     else
     # If user's login doesn't work, send them back to the login form.
     flash[:alert] = 'Hmm.. something went wrong. Please check you login info.'
 
-      redirect_to '/login'
+      redirect_to '/signup'
     end
   end
 

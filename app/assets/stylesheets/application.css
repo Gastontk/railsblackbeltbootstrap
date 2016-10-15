@@ -16,16 +16,16 @@
  body {
  	background-color: lightblue;
  }
- .div-user{
+/* .div-user{
  	vertical-align: right;
 
- }
+ }*/
  .div-user-error {
  	color: red;
  	background-color: linen;
- 	border: solid black 1px;
+ 	/*border: solid black 1px;*/
 	overflow: hidden; 
-	width: 450px;
+	width: 390px;
 	padding-top: 1px
  }
  #email, #password{ 	/*background-color: red;*/
@@ -38,3 +38,49 @@
  form{
  	/*background-color: red;*/
  }
+
+
+
+
+/*checking css stuff*/
+
+.div-user{
+		border: solid black 1px;
+		overflow: hidden; 
+		width: 390px;
+		background-color:linen;
+	}
+.div-login{
+
+		border: solid black 1px;
+		overflow: hidden; 
+		width: 390px;
+		background-color:linen;
+
+	
+}
+input{
+  width: 20em;
+  float: right;
+  text-align: right;
+  /*margin-right: 0.5em;*/
+  display: block
+}
+/*tag{
+	color:red;
+}*/
+.login-button{
+	/*color:red;*/
+	text-align: center;
+
+	margin-right: 200px
+	/*padding-top: 30px;*/
+	/*vertical-align: right;*/
+}
+
+
+
+
+
+
+
