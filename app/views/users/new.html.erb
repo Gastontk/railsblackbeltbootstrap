@@ -1,4 +1,4 @@
-<h1>Users#newssssss</h1>
+<h1>Users#new</h1>
 <h3 style="color:red;">
 	 <%= flash[:alert] if flash[:alert] %> 
 
@@ -7,7 +7,7 @@
 <div class = 'div-login'>
 	<%= form_tag '/login' do %>
 
-	  Email: <%= text_field_tag :email %> <br>
+	  Email: <%= text_field_tag :email %> <br> <br>
 	  Password: <%= password_field_tag :password %> <br> <br>
 	  <%= submit_tag "Login", :class => 'login-button' %>
 
@@ -32,10 +32,10 @@
 
 <%= form_for :user, url: '/users' do |f| %>
 
-  First Name: <%= f.text_field :first_name %> <br>
-  Last Name: <%= f.text_field :last_name %> <br>
-  Email: <%= f.email_field :email %> <br>
-  Password: <%= f.password_field :password %> <br>
+  First Name: <%= f.text_field :first_name %> <br> <br>
+  Last Name: <%= f.text_field :last_name %> <br> <br>
+  Email: <%= f.email_field :email %> <br> <br>
+  Password: <%= f.password_field :password %> <br> <br>
   Password Confirmation: <%= f.password_field :password_confirmation %> <br> <br>
   <%= f.submit "Create User", :class => 'login-button' %>
 

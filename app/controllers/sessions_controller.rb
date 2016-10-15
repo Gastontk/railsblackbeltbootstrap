@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       redirect_to '/signup'
     else
     # If user's login doesn't work, send them back to the login form.
-    flash[:alert] = 'Hmm.. something went wrong. Please check you login info.'
+    flash[:alert] = 'Incorrect login info. Check your Email and Password.'
 
       redirect_to '/signup'
     end
