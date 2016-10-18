@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class='header col-md-6'>
+<div class='header col-md-6 pull-right'>
 	<% if current_user %>
 	  Signed in as <%= current_user.first_name %> <%=current_user.last_name%> | <%= link_to "Logout", '/logout' %>
 	<% else %>
