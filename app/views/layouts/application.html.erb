@@ -8,15 +8,21 @@
 </head>
 <body>
 
-<div class='header'>
+<div class='header col-md-6'>
 	<% if current_user %>
 	  Signed in as <%= current_user.first_name %> <%=current_user.last_name%> | <%= link_to "Logout", '/logout' %>
 	<% else %>
 	  <%= link_to 'Login', '/signup' %> | <%= link_to 'Signup', '/signup' %>
 	<% end %>
 </div>
+<div id="main-container" class="container">
+  <div class="row">
 
-<%= yield %>
+    <div class="col-xs-9">
+      <%= yield %>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

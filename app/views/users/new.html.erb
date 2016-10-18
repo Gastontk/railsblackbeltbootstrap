@@ -1,15 +1,15 @@
-<h1>Users#new</h1>
+
 <h3 style="color:red;">
 	 <%= flash[:alert] if flash[:alert] %> 
 
 </h3>
+<div class='form col-md-6'>
+	<h1>Login</h1>
+	<%= bootstrap_form_for :session, url: '/login' do  |t|%>
 
-<div class = 'div-login'>
-	<%= form_tag '/login' do %>
-
-	  Email: <%= text_field_tag :email %> <br> <br>
-	  Password: <%= password_field_tag :password %> <br> <br>
-	  <%= submit_tag "Login", :class => 'login-button' %>
+	 <%= t.text_field :email %>
+	 <%= t.password_field :password %>
+	 <%= t.submit "Login", :class => 'btn btn-primary' %>
 
 	<% end %>
 </div>
@@ -18,26 +18,31 @@
 
 
 
+
+
+
+<div class = 'form col-md-6'>
 <h1>Signup!</h1>
 
-<div class="div-user">
+
 
 <% if @user && @user.errors.any? %>
-	<div class='div-user-error'>
+	<div class='alert alert-danger'>
 	<% @user.errors.full_messages.each do |t| %> <br>
 		<%= t %>
 	<% end %>
 	</div>
 <% end %>
 
-<%= form_for :user, url: '/users' do |f| %>
 
-  First Name: <%= f.text_field :first_name %> <br> <br>
-  Last Name: <%= f.text_field :last_name %> <br> <br>
-  Email: <%= f.email_field :email %> <br> <br>
-  Password: <%= f.password_field :password %> <br> <br>
-  Password Confirmation: <%= f.password_field :password_confirmation %> <br> <br>
-  <%= f.submit "Create User", :class => 'login-button' %>
+<%= bootstrap_form_for :user, url: '/users' do |f| %>
+
+  	<%= f.text_field :first_name %> 
+ 	<%= f.text_field :last_name %>
+	<%= f.email_field :email %>
+	<%= f.password_field :password %> 
+	<%= f.password_field :password_confirmation %> 
+  <%= f.submit "Create User", :class => 'btn btn-primary' %>
 
 </div>
 

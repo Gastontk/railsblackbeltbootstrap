@@ -1,10 +1,11 @@
 <h1>Sessions#new</h1>
 <h1>Login</h1>
+<div class ='col-md-3'>
+	<%= bootstrap_form_for :session, url: '/login' do |t| %>
 
-<%= form_tag '/login' do %>
+		<%= t.text_field  :email %> <br>
+		<%= t.password_field :password %> <br>
+	  	<%= t.submit "Submit" %>
 
-  Email: <%= text_field_tag :email %> <br>
-  Password: <%= password_field_tag :password %> <br>
-  <%= submit_tag "Submit" %>
-
-<% end %>
+	<% end %>
+</div>
