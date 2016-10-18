@@ -1,6 +1,22 @@
 Rails.application.routes.draw do
+  get 'orgs/new'
+
+  get 'orgs/create'
+
+  get 'orgs/edit'
+
+  get 'orgs/update'
+
+  get 'orgs/index'
+
+  get 'orgs/show'
+
+  get 'orgs/destroy'
+  get '/main' => 'orgs#index'
+
   resources :users, only: [:new, :create, :show]
   resources :sessions, only: [:new, :create, :destroy]
+  resources :orgs
 
 
   get 'session/new'
@@ -27,6 +43,8 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
   get '/logout' => 'sessions#destroy'
   get '/users' => 'users#new'
+  post '/add_group_to_user' => 'orgs#add_group_to_user'
+  post '/delete_group_from_user' => 'orgs#delete_group_from_user'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

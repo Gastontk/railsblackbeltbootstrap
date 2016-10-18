@@ -17,6 +17,7 @@ class UsersController < ApplicationController
                   # render plain: @user.errors.full_messages.third
 
       flash[:alert] = 'Something went wrong. Check your info.'
+      @org = Org.new
       render 'users/new'
     end
   end

@@ -3,16 +3,7 @@
 	 <%= flash[:alert] if flash[:alert] %> 
 
 </h3>
-<div class='form col-md-6'>
-	<h1>Login</h1>
-	<%= bootstrap_form_for :session, url: '/login' do  |t|%>
 
-	 <%= t.text_field :email %>
-	 <%= t.password_field :password %>
-	 <%= t.submit "Login", :class => 'btn btn-primary' %>
-
-	<% end %>
-</div>
 
 
 
@@ -27,7 +18,7 @@
 
 
 <% if @user && @user.errors.any? %>
-	<div class='alert alert-danger'>
+	<div class='alert-danger'>
 	<% @user.errors.full_messages.each do |t| %> <br>
 		<%= t %>
 	<% end %>
@@ -36,15 +27,30 @@
 
 
 <%= bootstrap_form_for :user, url: '/users' do |f| %>
-
-  	<%= f.text_field :first_name %> 
+  	<%= f.text_field :first_name %>
  	<%= f.text_field :last_name %>
 	<%= f.email_field :email %>
 	<%= f.password_field :password %> 
 	<%= f.password_field :password_confirmation %> 
-  <%= f.submit "Create User", :class => 'btn btn-primary' %>
+  <%= f.submit "Create User", :class => 'btn btn-primary pull-right' %>
 
 </div>
 
 <% end %>
+
+
+
+
+<div class='form col-md-6'>
+	<h1>Login</h1>
+	<h1 style='color:red;'><%= flash[:log_alert] if flash[:log_alert] %> </h1>
+
+	<%= bootstrap_form_for :session, url: '/login', method: :post do |t|%>
+
+		 <%= t.text_field :email %>
+		 <%= t.password_field :password %>
+		 <%= t.submit "Login", :class => 'btn btn-primary pull-right' %>
+
+	<% end %>
+</div>
 
