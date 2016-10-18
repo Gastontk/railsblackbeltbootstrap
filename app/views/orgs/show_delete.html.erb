@@ -1,17 +1,17 @@
 <br><br><br>
 <div class ='col-md-4'>
 	<h2><%=@org.name %></h2><br>
-	<%= @org.description %> <br>
+	<%= @org.description %> <br> <br> <br>
 	Created by: <% if current_user.id == @org.owner_id %>
 					YOU
 				<%else%>
 					<%= User.find_by_id(@org.owner_id).first_name %>  <%= User.find_by_id(@org.owner_id).last_name %>
 				<%end %><br> <br> <br>
 	Members: <br> <% @org.users.each do |t| %>
-		<%= t.first_name %> <%= t.last_name %> <br>
+		-&nbsp; &nbsp;<%= t.first_name %> <%= t.last_name %> <br>
 					<% end %> 
 
 </div>
-<div class = 'col-md-2' style ='margin-left:100px; margin-top:20px;'>
+<div class = 'col-md-1' style ='margin-left:100px; margin-top:20px;'>
 		<%= button_to 'Leave Group', '/delete_group_from_user', class: ' btn right-align', params:{org_id:@org.id} %>
 </div>
